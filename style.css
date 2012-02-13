@@ -1,0 +1,138 @@
+/*  
+Theme Name: Give Me A Name
+Theme URI: 
+Description: 
+Version: 0.0.1
+Author: 
+Author URI: 
+
+
+Using the wp-minimal-boil started by Patrick Best
+https://github.com/patrickbest
+
+	
+The CSS is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php 
+*/
+
+/* resets - based on html5 boilerplate */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+} 
+
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none; }
+
+/* end resets - now tweaks */
+
+body, select, input, textarea { color:#444; }
+
+/* www.aestheticallyloyal.com/public/optimize-legibility/ */ 
+h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
+
+/* maxvoltar.com/archive/-webkit-font-smoothing */
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: none; }
+
+a, a:active, a:visited { color:#607890; }
+a:hover { color:#036; }
+
+/* align checkboxes, radios, text inputs with their label
+   by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+
+/* hand cursor on clickable input elements */
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+/* always force a scrollbar in non-IE */
+html { overflow-y: scroll; }
+
+/* make buttons play nice in IE:    
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {  width: auto; overflow: visible; }
+ 
+/* bicubic resizing for non-native sized IMG: 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/* >> The Magnificent CLEARFIX << */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; } /* Hides from IE-mac \*/
+.clearfix { display: block; }
+
+/* end tweaks */
+
+
+
+/* stuff that might be useful */
+
+body {
+font-family: 'Inconsolata', 'Arial', sans-serif;
+}
+
+a 				{}
+a:link    		{}
+a:visited 		{}
+a:active  		{}
+a:hover   		{}
+
+
+
+/* structure */
+
+section#container {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 920px;
+}
+
+header {
+
+}
+
+section#main-content {
+
+}
+
+section#posts {
+
+}
+
+article.post {
+
+}
+
+nav#pagination {
+
+}
+
+					   
+
