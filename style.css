@@ -46,6 +46,8 @@ input, select { vertical-align:middle; }
 
 a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none; }
 
+li {list-style: none;}
+
 /* end resets - now tweaks */
 
 body, select, input, textarea { color:#444; }
