@@ -57,13 +57,13 @@
 	<?php wp_head(); ?>
 </head>
 
-<!-- no support for sub 7.0 internet explorer -->
-
-<!--[if lt IE 7 ]> <body class="ie6">The website will not work on Internet Explorer versions older than 7 as they are outdated and insecure. Free (and improved) browsers can be downloaded by googling for Google Chrome, Mozilla Firefox, or Apple Safari</body></html> <![endif]-->
-
 <!-- start page -->
 <body <?php body_class($class); ?>>
 <section id="container">
+
+<!-- sub 7.0 internet explorer warning-->
+
+<!--[if lt IE 7 ]>The website will not work properly on Internet Explorer versions older than 7 as they are outdated, instable and insecure. Free (and improved) browsers can be downloaded for free: <a href="www.google.com/chrome">Google Chrome</a>, <a href="www.getfirefox.net/">Mozilla Firefox</a>, or <a href="www.apple.com/safari/">Apple Safari</a> <![endif]-->
 
 <!-- start content -->
 <header>

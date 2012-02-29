@@ -1,15 +1,5 @@
 <?php wp_footer(); ?>
 
-<!-- wanna put some jQuery here -->
-<script type="text/javascript">
-	
-		jQuery(document).ready(function( $ ) {
-		 
-			
-		});	
-
-</script>
-
   <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
        change the UA-XXXXX-X to be your site's ID -->
 <script>
