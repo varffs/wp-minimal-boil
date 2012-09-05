@@ -6,60 +6,22 @@ Version: 0.0.1
 Author: 
 Author URI: 
 
+Using the wp-minimal-boil started by Patrick Best https://github.com/patrickbest The CSS is released under GPL: http://www.opensource.org/licenses/gpl-license.php 
 
-Using the wp-minimal-boil started by Patrick Best
-https://github.com/patrickbest
+resets */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,hgroup,menu,nav,section,menu,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+table{border-collapse:collapse;border-spacing:0;}
+hr{display:block;height:1px;border:0;border-top:1px solid#ccc;margin:1em 0;padding:0;}
+input,select{vertical-align:middle;}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;}
+li{list-style:none;}
 
-	
-The CSS is released under GPL:
-http://www.opensource.org/licenses/gpl-license.php 
-*/
-
-/* resets - based on html5 boilerplate */
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, figure, footer, header, 
-hgroup, menu, nav, section, menu,
-time, mark, audio, video {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
-} 
-
-table { border-collapse:collapse; border-spacing:0; }
-
-hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
-
-input, select { vertical-align:middle; }
-
-a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; text-decoration: none; }
-
-li {list-style: none;}
-
-/* end resets - now tweaks */
+/* tweaks */
 
 body, select, input, textarea { color:#444; }
 
-/* www.aestheticallyloyal.com/public/optimize-legibility/ */ 
-h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
-
-/* maxvoltar.com/archive/-webkit-font-smoothing */
-
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
-
 a, a:active, a:visited { color:#607890; }
 a:hover { color:#036; }
 
@@ -89,11 +51,7 @@ button {  width: auto; overflow: visible; }
 * html .clearfix { height: 1%; } /* Hides from IE-mac \*/
 .clearfix { display: block; }
 
-/* end tweaks */
-
-
-
-/* stuff that might be useful */
+/* stuff */
 
 body {
 font-family: 'Inconsolata', 'Arial', sans-serif;
@@ -135,6 +93,3 @@ article.post {
 nav#pagination {
 
 }
-
-					   
-

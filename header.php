@@ -1,24 +1,21 @@
 <!doctype html>
 <html lang="en" class="no-js" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-<meta charset="utf-8">
+<meta charset="<?php bloginfo('charset'); ?>">
   
 <title><?php wp_title('|',true,'right'); bloginfo('name'); ?></title>
-
-<!-- www.phpied.com/conditional-comments-block-downloads/ -->
-<!--[if IE]><![endif]-->
 
 <!-- meta -->
 
   	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame  -->
   	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
-  	<meta name="viewport" content="">
+	<meta name="viewport" content="width=device-width, minimum-scale=0, maximum-scale=1.0">
 
 	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="description" content="<?php bloginfo('description'); ?>">
   	<meta name="author" content="">
   	
-  	<!-- & FB meta -->
+<!-- fb meta -->
 
 	<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
 	<meta property="fb:admins" content="" />
@@ -32,7 +29,12 @@
 	<meta property="og:title" content="<?php single_post_title(''); ?>" />
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-<?php } else { ?>
+<?php	if(has_post_thumbnail()) { $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'mid-sq' ); ?>
+	<meta property="og:image" content="<?php echo $thumb['0'] ?>" />
+	<?php } else { ?>
+	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" />
+	<?php } 
+} else { ?>
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 	<meta property="og:type" content="website" />
@@ -58,7 +60,7 @@
 </head>
 
 <!-- start page -->
-<body <?php body_class($class); ?>>
+<body <?php body_class(); ?>>
 <section id="container">
 
 <!-- sub 7.0 internet explorer warning-->
