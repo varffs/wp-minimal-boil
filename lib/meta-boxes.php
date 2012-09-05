@@ -8,7 +8,7 @@ function cmb_sample_metaboxes( array $meta_boxes ) {
 	$meta_boxes[] = array(
 		'id'         => 'postype_metabox',
 		'title'      => '... Settings',
-		'pages'      => array( 'posts', ),
+		'pages'      => array( 'post', ),
 		'context'    => 'normal',
 		'priority'   => 'high',
 		'show_names' => true,
