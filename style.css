@@ -20,8 +20,6 @@ li{list-style:none;}
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
-a, a:active, a:visited { color:#607890; }
-a:hover { color:#036; }
 
 /* align checkboxes, radios, text inputs with their label
    by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
@@ -57,6 +55,9 @@ html { -webkit-text-size-adjust: none }
 body {
 	font-family: sans-serif;
 }
+
+a, a:active, a:visited { color:#607890; }
+a:hover { color:#036; }
 
 /* STRUCTURE */
 

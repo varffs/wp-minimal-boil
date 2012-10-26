@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="no-js" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
 <meta charset="<?php bloginfo('charset'); ?>">
   
@@ -9,7 +9,7 @@
 
   	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame  -->
   	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
-	<meta name="viewport" content="width=device-width, minimum-scale=0, maximum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<meta name="keywords" content="">
 	<meta name="description" content="<?php bloginfo('description'); ?>">
@@ -51,7 +51,7 @@
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon-touch.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">
 	
-	 <!-- Modernizr which enables HTML5 elements & feature detects. Generate your own minimal version on release at the website. -->
+	 <!-- Modernizr enables HTML5 elements & feature detects. Generate your own minimal version on release at the website. -->
 	 <!-- all other scripts are enqueued in functions.php -->
   	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr.js"></script>
 	
