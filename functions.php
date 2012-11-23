@@ -26,6 +26,7 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'name', 199, 299, true );
 }
 
+get_template_part( 'lib/post-types' );
 get_template_part( 'lib/meta-boxes' );
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
 function cmb_initialize_cmb_meta_boxes() {

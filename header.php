@@ -71,4 +71,6 @@
 <!-- start content -->
 <header>
 
+<h1><?php echo home_url(); ?></h1>
+
 </header>

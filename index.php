@@ -11,8 +11,10 @@
 
 			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-			<?php the_permalink() ?>
-			<?php the_title(); ?> 
+			<a href="<?php the_permalink() ?>">
+			<?php the_title(); ?>
+			</a>
+			
  	  		<?php the_content(); ?>
 			
 			</article>
@@ -26,7 +28,7 @@
 		
 		<!-- post pagination -->
 		<nav id="pagination">
-		<?php posts_nav_link(); ?>		
+		<?php if ($previous = get_previous_posts_link()) {echo $previous; } ?> <?php if ($next = get_next_posts_link()) {echo $next; } ?>		
 		</nav>
 	
 	<!-- end main-content -->
