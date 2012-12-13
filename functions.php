@@ -1,8 +1,8 @@
 <?php 
 function my_scripts_method() {
     wp_deregister_script( 'jquery' );
-/* use google cdn jquery for potential cache speed advantage */
-    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js');
+/* use cdnjs.com jquery - faster than google */
+    wp_register_script( 'jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js');
     wp_enqueue_script('jquery','','','',true);
 /* wp includes quite a few js libs by default, here is the ui draggable */
 /* wp_enqueue_script( 'jquery-ui-draggable','','','',true ); */
