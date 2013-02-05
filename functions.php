@@ -36,4 +36,7 @@ function cmb_initialize_cmb_meta_boxes() {
 
 /* disable that freaking admin bar */
 add_filter('show_admin_bar', '__return_false');
+/* turn off version in meta */
+function no_generator() { return ''; }  
+add_filter( 'the_generator', 'no_generator' );
 ?>
