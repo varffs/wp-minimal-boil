@@ -15,10 +15,13 @@
 	<meta name="description" content="<?php bloginfo('description'); ?>">
   	<meta name="author" content="">
   	
-<!-- fb meta -->
+<!-- social graph meta -->
 
 	<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
-	<meta property="fb:admins" content="" />
+ 	<meta property="fb:admins" content="" />
+<!-- 	<meta name="twitter:card" value="summary"> -->
+<!-- 	<meta name="twitter:site" value="@"> -->
+<!-- 	<meta name="twitter:creator" value="@"> -->
 
 <?php if (is_home()) { ?>
 	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
@@ -27,6 +30,7 @@
 <?php } if (is_single()) { ?>
 	<meta property="og:url" content="<?php the_permalink() ?>"/>
 	<meta property="og:title" content="<?php single_post_title(''); ?>" />
+	<meta property="og:description" content="<?php the_excerpt(); ?>" />
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 <?php	if(has_post_thumbnail()) { $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'mid-sq' ); ?>
