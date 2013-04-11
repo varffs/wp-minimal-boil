@@ -1,24 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-<meta charset="<?php bloginfo('charset'); ?>">
-  
-<title><?php wp_title('|',true,'right'); bloginfo('name'); ?></title>
-
-<!-- meta -->
-
-  	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame  -->
-  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<meta name="keywords" content="">
-	<meta name="description" content="<?php bloginfo('description'); ?>">
-  	<meta name="author" content="">
+	
+		<meta charset="<?php bloginfo('charset'); ?>">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        	<title><?php wp_title('|',true,'right'); bloginfo('name'); ?></title>
+        <meta name="description" content="<?php bloginfo('description'); ?>">
+        <meta name="viewport" content="width=device-width">
+<!--         <meta name="keywords" content=""> -->
   	
 <!-- social graph meta -->
 
 	<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
- 	<meta property="fb:admins" content="" />
+<!--  	<meta property="fb:admins" content="" /> -->
 <!-- 	<meta name="twitter:card" value="summary"> -->
 <!-- 	<meta name="twitter:site" value="@"> -->
 <!-- 	<meta name="twitter:creator" value="@"> -->
@@ -33,7 +27,7 @@
 	<meta property="og:description" content="<?php the_excerpt(); ?>" />
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-<?php	if(has_post_thumbnail()) { $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'mid-sq' ); ?>
+<?php	if(has_post_thumbnail()) { $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'opengraph' ); ?>
 	<meta property="og:image" content="<?php echo $thumb['0'] ?>" />
 	<?php } else { ?>
 	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" />
@@ -45,19 +39,19 @@
 	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" /> 
 <?php } ?>
 
-
 <!-- links -->
 
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/resets.css" />	
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />	
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">
 	<link rel="shortcut" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon-touch.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">	
 	
-	 <!-- Modernizr enables HTML5 elements & feature detects. Generate your own minimal version on release at the website. -->
-	 <!-- all other scripts are enqueued in functions.php -->
-  	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr.js"></script>
+	
+	<!-- modernizr here, jquery in the footer, all other scripts are in enqueued in functions.php -->
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr.js"></script>
 	
 	<!-- wordpress header -->
 	 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -66,11 +60,13 @@
 
 <!-- start page -->
 <body <?php body_class(); ?>>
-<section id="container">
 
-<!-- sub 7.0 internet explorer warning-->
+<section class="container">
 
-<!--[if lt IE 7 ]>The website will not work properly on Internet Explorer versions older than 7 as they are outdated, instable and insecure. Free (and improved) browsers can be downloaded for free: <a href="www.google.com/chrome">Google Chrome</a>, <a href="www.getfirefox.net/">Mozilla Firefox</a>, or <a href="www.apple.com/safari/">Apple Safari</a> <![endif]-->
+	<!-- sub 7.0 internet explorer warning-->
+		<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
 
 <!-- start content -->
 <header>

@@ -1,21 +1,28 @@
 <?php 
 function my_scripts_method() {
+
+    /*
+    jquery loaded from cdn.js in footer.php with a local failsafe. or you can enqueue here:
+    
     wp_deregister_script( 'jquery' );
-/* use cdnjs.com jquery - faster than google */
     wp_register_script( 'jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js');
     wp_enqueue_script('jquery','','','',true);
-/* wp includes quite a few js libs by default, here is the ui draggable */
-/* wp_enqueue_script( 'jquery-ui-draggable','','','',true ); */
+    */
+    
+    /* 	
+	wordpress includes quite a few js libs by default, here is the ui draggable 
+	wp_enqueue_script( 'jquery-ui-draggable','','','',true ); 
+	*/
+	
     $templateuri = get_template_directory_uri() . '/js/';
-/* fallback or local jquery - remove on production if u want */
-    $localjq = $templateuri."jquery-1.8.1.min.js";
-    wp_enqueue_script( 'localjq', $localjq,'','',true);
-/* lib to bundle production js libaries */
+  
+	/* lib.js is to bundle plugins. my.js is your scripts. enqueue more files as needed */
+
     $jslib = $templateuri."lib.js";
     wp_enqueue_script( 'jslib', $jslib,'','',true);
-/* follow this pattern to enqueue your scripts */
     $myscripts = $templateuri."my.js";
     wp_enqueue_script( 'myscripts', $myscripts,'','',true);
+    
 }     
 add_action('wp_enqueue_scripts', 'my_scripts_method');
 	
@@ -23,6 +30,7 @@ if ( function_exists( 'add_theme_support' ) ) {
   	add_theme_support( 'post-thumbnails' ); 
 }
 if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'opengraph', 300, 300, true );
 	add_image_size( 'name', 199, 299, true );
 }
 

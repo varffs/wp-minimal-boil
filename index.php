@@ -20,7 +20,7 @@
 			</article>
 
 		<?php endwhile; else: ?>
-		<p><?php _e('Sorry, no posts matched your criteria :{'); ?></p>
+			<p><?php _e('Sorry, no posts matched your criteria :{'); ?></p>
 		<?php endif; ?>
 		
 		<!-- end posts -->
@@ -28,7 +28,7 @@
 		
 		<!-- post pagination -->
 		<nav id="pagination">
-		<?php if ($previous = get_previous_posts_link()) {echo $previous; } ?> <?php if ($next = get_next_posts_link()) {echo $next; } ?>		
+			<?php if ($previous = get_previous_posts_link()) {echo $previous; } ?> <?php if ($next = get_next_posts_link()) {echo $next; } ?>		
 		</nav>
 	
 	<!-- end main-content -->
