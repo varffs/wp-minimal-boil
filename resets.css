@@ -756,7 +756,7 @@ textarea {
 
 /* 
 	**************
-wp-minimal-boil helpers & tweaks :} */
+wp-minimal-boil helpers & tweaks :} remove as needed */
 
 html {
 	overflow-y: scroll;
@@ -845,4 +845,13 @@ ul.inline-list li {
 
 .mt40 {
 	margin-top: 40px;
+}
+
+.holder {
+	display: table;
+}
+
+.held {
+	display: table-cell;
+    vertical-align: middle;
 }
