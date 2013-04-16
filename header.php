@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         	<title><?php wp_title('|',true,'right'); bloginfo('name'); ?></title>
         <meta name="description" content="<?php bloginfo('description'); ?>">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--         <meta name="keywords" content=""> -->
   	
 <!-- social graph meta -->
