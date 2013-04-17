@@ -19,17 +19,19 @@
 		<?php } 
 		if (is_home()) { ?>
 	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
+	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" /> 
+	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+	<meta name="twitter:card" value="<?php bloginfo('description'); ?>">
 <?php } elseif (is_single()) { ?>
 	<meta property="og:url" content="<?php the_permalink() ?>"/>
 	<meta property="og:title" content="<?php single_post_title(''); ?>" />
 	<meta property="og:description" content="<?php echo $excerpt ?>" />
 	<meta name="twitter:card" value="<?php echo $excerpt ?>">
-<!-- 	<meta name="twitter:creator" value="@"> -->
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 <?php } else { ?>
+	<meta property="og:title" content="<?php single_post_title(''); ?>" />
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 	<meta name="twitter:card" value="<?php bloginfo('description'); ?>">
