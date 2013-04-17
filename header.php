@@ -7,36 +7,33 @@
         	<title><?php wp_title('|',true,'right'); bloginfo('name'); ?></title>
         <meta name="description" content="<?php bloginfo('description'); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--         <meta name="keywords" content=""> -->
-  	
+
 <!-- social graph meta -->
-
-	<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
-<!--  	<meta property="fb:admins" content="" /> -->
-<!-- 	<meta name="twitter:card" value="summary"> -->
-<!-- 	<meta name="twitter:site" value="@"> -->
-<!-- 	<meta name="twitter:creator" value="@"> -->
-
-<?php if (is_home()) { ?>
+	<meta name="twitter:site" value="@">	
+	<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;
+		$excerpt = get_the_excerpt();		
+		if(has_post_thumbnail()) { $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'opengraph' ); ?>
+	<meta property="og:image" content="<?php echo $thumb['0'] ?>" />
+		<?php } else { ?>
+	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" />
+		<?php } 
+		if (is_home()) { ?>
 	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" /> 
-<?php } if (is_single()) { ?>
+<?php } elseif (is_single()) { ?>
 	<meta property="og:url" content="<?php the_permalink() ?>"/>
 	<meta property="og:title" content="<?php single_post_title(''); ?>" />
-	<meta property="og:description" content="<?php the_excerpt(); ?>" />
+	<meta property="og:description" content="<?php echo $excerpt ?>" />
+	<meta name="twitter:card" value="<?php echo $excerpt ?>">
+<!-- 	<meta name="twitter:creator" value="@"> -->
 	<meta property="og:type" content="article" />
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-<?php	if(has_post_thumbnail()) { $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'opengraph' ); ?>
-	<meta property="og:image" content="<?php echo $thumb['0'] ?>" />
-	<?php } else { ?>
-	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" />
-	<?php } 
-} else { ?>
+<?php } else { ?>
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 	<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+	<meta name="twitter:card" value="<?php bloginfo('description'); ?>">
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" /> 
 <?php } ?>
 
 <!-- links -->
