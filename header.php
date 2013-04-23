@@ -48,10 +48,17 @@
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon-touch.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">	
 	
-	
 	<!-- modernizr here, jquery in the footer, all other scripts are in enqueued in functions.php -->
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr.js"></script>
-	
+	<script type="text/javascript">
+		Modernizr.load([
+			{
+				test: Modernizr.mq('only all'),
+				nope: "<?php bloginfo('stylesheet_directory'); ?>/js/polyfills/mediaqueries.js"
+			}
+		]);
+	</script>
+		
 	<!-- wordpress header -->
 	 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_head(); ?>
