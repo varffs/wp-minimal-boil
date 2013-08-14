@@ -849,6 +849,8 @@ ul.inline-list li {
 
 .holder {
 	display: table;
+	width: 100%;
+	height: 100%;
 }
 
 .held {
