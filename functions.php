@@ -30,6 +30,7 @@ if ( function_exists( 'add_theme_support' ) ) {
   	add_theme_support( 'post-thumbnails' ); 
 }
 if ( function_exists( 'add_image_size' ) ) { 
+	add_image_size( 'admin-thumb', 150, 150, false );
 	add_image_size( 'opengraph', 300, 300, true );
 	add_image_size( 'name', 199, 299, true );
 }
@@ -47,4 +48,22 @@ add_filter('show_admin_bar', '__return_false');
 /* turn off version in meta */
 function no_generator() { return ''; }  
 add_filter( 'the_generator', 'no_generator' );
+/* show thumbnails in admin lists */
+add_filter('manage_posts_columns', 'new_add_post_thumbnail_column');
+function new_add_post_thumbnail_column($cols){
+	$cols['new_post_thumb'] = __('Thumbnail');
+	return $cols;
+}
+add_action('manage_posts_custom_column', 'new_display_post_thumbnail_column', 5, 2);
+function new_display_post_thumbnail_column($col, $id){
+	switch($col){
+		case 'new_post_thumb':
+		if( function_exists('the_post_thumbnail') ) {
+			echo the_post_thumbnail( 'admin-thumb' );
+			}
+		else
+		echo 'Not supported in theme';
+		break;
+	}
+}
 ?>
