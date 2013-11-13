@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-	
+
 		<meta charset="<?php bloginfo('charset'); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         	<title><?php wp_title('|',true,'right'); bloginfo('name'); ?></title>
@@ -9,14 +9,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- social graph meta -->
-	<meta name="twitter:site" value="@">	
+
+	<meta name="twitter:site" value="@">
 	<?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;
-		$excerpt = get_the_excerpt();		
+		$excerpt = get_the_excerpt();
 		if(has_post_thumbnail()) { $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'opengraph' ); ?>
 	<meta property="og:image" content="<?php echo $thumb['0'] ?>" />
 		<?php } else { ?>
 	<meta property="og:image" content="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png" />
-		<?php } 
+		<?php }
 		if (is_home()) { ?>
 	<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
@@ -40,14 +41,14 @@
 
 <!-- links -->
 
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/resets.css" />	
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />	
+<!-- 	if you are looking for stylesheets they are enqueued in functions.php -->
+
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">
 	<link rel="shortcut" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon-touch.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">	
-	
+	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">
+
 	<!-- modernizr here, jquery in the footer, all other scripts are in enqueued in functions.php -->
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr.js"></script>
 	<script type="text/javascript">
@@ -58,7 +59,7 @@
 			}
 		]);
 	</script>
-		
+
 	<!-- wordpress header -->
 	 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<?php wp_head(); ?>
