@@ -44,6 +44,12 @@ if ( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'name', 199, 299, true );
 }
 
+
+/*
+override wp default gallery
+get_template_part( 'lib/gallery' );
+*/
+
 get_template_part( 'lib/post-types' );
 get_template_part( 'lib/meta-boxes' );
 add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
