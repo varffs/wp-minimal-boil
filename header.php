@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
-
-		<meta charset="<?php bloginfo('charset'); ?>">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        	<title><?php wp_title('|',true,'right'); bloginfo('name'); ?></title>
-        <meta name="description" content="<?php bloginfo('description'); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="<?php bloginfo('charset'); ?>">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title><?php wp_title('|',true,'right'); bloginfo('name'); ?></title>
+	<meta name="description" content="<?php bloginfo('description'); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- social graph meta -->
-
 	<meta name="twitter:site" value="@">
 	<?php if (have_posts()):while(have_posts()):the_post();
 		$excerpt = get_the_excerpt();
@@ -42,17 +40,14 @@
 	<meta property="og:type" content="website" />
 <?php } ?>
 
-<!-- links -->
-
-<!-- 	if you are looking for stylesheets they are enqueued in functions.php -->
-
+<!-- if you are looking for stylesheets they are enqueued in functions.php -->
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">
 	<link rel="shortcut" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.ico">
 	<link rel="apple-touch-icon" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon-touch.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php bloginfo('stylesheet_directory'); ?>/img/favicon.png">
 
-	<!-- modernizr here, jquery in the footer, all other scripts are in enqueued in functions.php -->
+<!-- modernizr here, jquery in the footer, all other scripts are in enqueued in functions.php -->
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/modernizr.js"></script>
 	<script type="text/javascript">
 		Modernizr.load([
@@ -63,24 +58,21 @@
 		]);
 	</script>
 
-	<!-- wordpress header -->
-	 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<?php wp_head(); ?>
+<!-- wordpress header -->
+<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+<?php wp_head(); ?>
 </head>
-
-<!-- start page -->
 <body <?php body_class(); ?>>
 
 <section class="container">
-
-	<!-- sub 7.0 internet explorer warning-->
-		<!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
+<!-- sub 7.0 internet explorer warning-->
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
 
 <!-- start content -->
 <header>
 
-<h1><?php echo home_url(); ?></h1>
+	<h1><?php echo home_url(); ?></h1>
 
 </header>
