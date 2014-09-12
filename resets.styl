@@ -1,3 +1,51 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 /*! normalize.css v1.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -83,7 +131,7 @@ body {
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 a:focus {
-	outline:thin dotted;
+	outline:0;
 }
 
 /**
@@ -96,41 +144,6 @@ a:active,a:hover {
 /* ==========================================================================
    Typography
    ========================================================================== */
-/**
- * Address font sizes and margins set differently in IE 6/7.
- * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
- * and Chrome.
- */
-h1 {
-	font-size:2em;
-	margin:.67em 0;
-}
-
-h2 {
-	font-size:1.5em;
-	margin:.83em 0;
-}
-
-h3 {
-	font-size:1.17em;
-	margin:1em 0;
-}
-
-h4 {
-	font-size:1em;
-	margin:1.33em 0;
-}
-
-h5 {
-	font-size:.83em;
-	margin:1.67em 0;
-}
-
-h6 {
-	font-size:.67em;
-	margin:2.33em 0;
-}
-
 /**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
@@ -242,24 +255,6 @@ sub {
 /* ==========================================================================
    Lists
    ========================================================================== */
-/**
- * Address margins set differently in IE 6/7.
- */
-dl,menu,ol,ul {
-	margin:1em 0;
-}
-
-dd {
-	margin:0 0 0 40px;
-}
-
-/**
- * Address paddings set differently in IE 6/7.
- */
-menu,ol,ul {
-	padding:0 0 0 40px;
-}
-
 /**
  * Correct list images handled incorrectly in IE 7.
  */
@@ -473,15 +468,6 @@ table {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html,button,input,select,textarea {
-	color:#222;
-}
-
-body {
-	font-size:1em;
-	line-height:1.4;
-}
-
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -650,14 +636,14 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.cf:before,.cf:after {
+.u-cf:before,.u-cf:after {
 	content:" ";
 /* 1 */
 	display:table;
 /* 2 */
 }
 
-.cf:after {
+.u-cf:after {
 	clear:both;
 }
 
@@ -668,7 +654,7 @@ html {
 	overflow-y:scroll;
 }
 
-.inline-block {
+.u-inline-block {
 	display:inline-block;
 }
 
@@ -676,90 +662,33 @@ ul.inline-list li {
 	display:inline-block;
 }
 
-.fixed {
+.u-fixed {
 	position:fixed;
 }
 
-.fadein {
-	opacity:0;
-	transform:opacity .4s;
-}
-
-.pointer:hover {
+.u-pointer:hover {
 	cursor:pointer;
 }
 
-.align-right {
+.u-align-left {
+	text-align:left;
+}
+
+.u-align-right {
 	text-align:right;
 }
 
-.align-center {
+.u-align-center {
 	text-align:center;
 }
 
-.float-left {
-	float:left;
-}
-
-.float-right {
-	float:right;
-}
-
-.pb10 {
-	padding-bottom:10px;
-}
-
-.pb20 {
-	padding-bottom:20px;
-}
-
-.pb40 {
-	padding-bottom:40px;
-}
-
-.pt10 {
-	padding-top:10px;
-}
-
-.pt20 {
-	padding-top:20px;
-}
-
-.pt40 {
-	padding-top:40px;
-}
-
-.mb10 {
-	margin-bottom:10px;
-}
-
-.mb20 {
-	margin-bottom:20px;
-}
-
-.mb40 {
-	margin-bottom:40px;
-}
-
-.mt10 {
-	margin-top:10px;
-}
-
-.mt20 {
-	margin-top:20px;
-}
-
-.mt40 {
-	margin-top:40px;
-}
-
-.holder {
+.u-holder {
 	display:table;
 	width:100%;
 	height:100%;
 }
 
-.held {
+.u-held {
 	display:table-cell;
 	vertical-align:middle;
 }
