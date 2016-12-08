@@ -1,3 +1,5 @@
+# This is superseeded by: https://github.com/interglobalvision/globie-wordpress-starter-pack
+
 wp-minimal-boil
 ---------------
 
